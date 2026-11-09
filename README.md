@@ -1,6 +1,7 @@
 # VGMC v1.0
 
-VGMC constructs qubit-wise commuting measurement libraries and optimizes their estimator coefficients and shot allocations. The Python package provides a framework-neutral design interface and a PennyLane adapter. E1, E2 and E3 notebooks reproduce the molecular experiments. OGM, LF and SI are Python reproductions. ICS calls the referenced [Tequila repository](https://github.com/tequilahub/tequila/tree/93c361b6821ae6790fd0fc3d0b7a0ebfaa312be4).
+VGMC constructs qubit-wise commuting measurement libraries and optimizes their estimator coefficients and shot allocations. 
+The Python package provides a framework-neutral design interface and a PennyLane adapter.
 
 ## Installation
 
@@ -30,11 +31,13 @@ energy = plan.estimate([np.zeros((n, 1), dtype=int)
                         for n in plan.counts])
 ```
 
-A covariance provider can supply blocks on demand. `StateCovariance` supplies blocks from a pure state. `max_added` enables bounded VGMC group construction. The [API guide](docs/api.md) describes shapes, units, status fields and input/output examples. The [PennyLane example](examples/pennylane_measurement.py) converts an operator, designs measurements, executes product-basis tapes and reconstructs energy.
+A covariance provider can supply blocks on demand. `StateCovariance` supplies blocks from a pure state. `max_added` enables bounded VGMC group construction. 
+
+The [API guide](docs/api.md) describes shapes, units, status fields and input/output examples. 
+
+The [PennyLane example](examples/pennylane_measurement.py) converts an operator, designs measurements, executes product-basis tapes and reconstructs energy.
 
 ## Hamiltonians
-
-The molecular Hamiltonians for H₂, LiH, BeH₂, H₂O and NH₃ come from the original authors' open-source repository. The qubit operators use the Bravyi–Kitaev transform. [VQE_Hamiltonian](https://github.com/ThomsonYen/VQE_Hamiltonian)
 
 The input files contain nonidentity Pauli terms, coefficients, reference and CISD states, covariance blocks and initial group libraries. Source files, commit, SHA-256 hashes and identity coefficients are recorded in [data/hamiltonians.json](data/hamiltonians.json). Method references are listed in [docs/sources.md](docs/sources.md).
 
@@ -53,5 +56,3 @@ python -m vgmc reproduce E1 --output outputs/E1/report
 python -m vgmc plan E1 --molecules H2 --covariances exact --methods SI SOCP VGMC --output outputs/E1/run-001
 python -m vgmc run E1 --molecules H2 --covariances exact --methods SI SOCP VGMC --output outputs/E1/run-001 --allow-compute
 ```
-
-The mathematics and module boundaries are described in [CODE_DESIGN.md](CODE_DESIGN.md). Configuration, integrity checks and recovery are described in [the workflow guide](docs/workflow.md).
