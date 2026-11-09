@@ -1,0 +1,17 @@
+molecule,arm,state,terminal,normal,elapsed
+LiH,A,added_budget_reached,True,True,58.48501117399792
+LiH,B,candidate_pool_tolerance_reached,True,True,36.411014637000335
+LiH,C,candidate_pool_tolerance_reached,True,True,29.424506790001033
+LiH,D,candidate_pool_tolerance_reached,True,True,18.442851304000214
+BeH2,A,added_budget_reached,True,True,108.41365409699938
+BeH2,B,candidate_pool_tolerance_reached,True,True,41.268822697998985
+BeH2,C,candidate_pool_tolerance_reached,True,True,85.38785597000242
+BeH2,D,candidate_pool_tolerance_reached,True,True,30.32650016700063
+H2O,A,candidate_pool_tolerance_reached,True,True,314.8529535130001
+H2O,B,candidate_pool_tolerance_reached,True,True,78.40910461300155
+H2O,C,candidate_pool_tolerance_reached,True,True,278.9840301940021
+H2O,D,candidate_pool_tolerance_reached,True,True,70.41902781799945
+NH3,A,candidate_pool_tolerance_reached,True,True,6793.774379995
+NH3,B,candidate_pool_tolerance_reached,True,True,865.0249516030017
+NH3,C,candidate_pool_tolerance_reached,True,True,6515.076292955
+NH3,D,candidate_pool_tolerance_reached,True,True,726.7905983439996

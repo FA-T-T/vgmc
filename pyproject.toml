@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vgmc"
+version = "1.0.0"
+description = "Variance-guided measurement construction and molecular experiment reproduction"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy==2.4.2",
+    "scipy==1.15.3",
+    "mpmath==1.3.0",
+    "threadpoolctl==3.6.0",
+]
+
+[project.optional-dependencies]
+experiments = ["pandas==3.0.6", "matplotlib==3.10.1", "cvxpy==1.6.5", "clarabel==0.11.1"]
+pennylane = ["PennyLane==0.45.1"]
+dev = ["pytest==9.2.0", "mypy==1.19.1", "black==25.1.0", "ruff==0.11.13", "build==1.2.2.post1"]
+notebooks = ["jupyterlab==4.4.3", "nbformat==5.10.4", "nbclient==0.10.2", "ipykernel==6.29.5"]
+tequila = ["tequila-basic @ git+https://github.com/tequilahub/tequila.git@93c361b6821ae6790fd0fc3d0b7a0ebfaa312be4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 79
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E4", "E5", "E7", "E9", "F", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+
+[tool.setuptools.package-data]
+vgmc = ["py.typed"]

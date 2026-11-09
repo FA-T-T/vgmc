@@ -1,0 +1,57 @@
+{
+  "molecules": [
+    "H2",
+    "LiH",
+    "BeH2",
+    "H2O",
+    "NH3"
+  ],
+  "covariances": [
+    "exact",
+    "cisd"
+  ],
+  "methods": [
+    "LF",
+    "OGM",
+    "SI",
+    "ICS",
+    "SOCP",
+    "VGMC"
+  ],
+  "ics_iterations": 5,
+  "ogm_shots": 1000000,
+  "expansion": {
+    "solver": {
+      "ridge": 1e-08,
+      "relative_gap": 0.0001,
+      "allocation_floor": 1e-15,
+      "dual_safety_margin": 1e-08,
+      "linear_refinements": 3,
+      "coefficient_refinements": 2,
+      "conservation_tolerance": 1e-09,
+      "checkpoint_interval": 50,
+      "max_updates": 10000,
+      "max_evaluations": 100000,
+      "max_backtracks": 30,
+      "stall_checks": 3,
+      "threads": 1
+    },
+    "inner_gap": 0.001,
+    "terminal_gap": 0.0001,
+    "boundary_gaps": [
+      1e-05,
+      1e-06
+    ],
+    "pool_gain_over_initial": 0.0001,
+    "active_threshold": 1e-12,
+    "new_mass": 0.001,
+    "candidate_score_margin": 1e-06,
+    "dual_safety_margin": 1e-09,
+    "batch_fraction": 0.1,
+    "batch_minimum": 8,
+    "batch_maximum": 256,
+    "linear_refinements": 3,
+    "eigen_error_factor": 8,
+    "roundoff_factor": 64
+  }
+}

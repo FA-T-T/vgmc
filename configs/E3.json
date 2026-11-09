@@ -1,0 +1,194 @@
+{
+  "molecules": {
+    "BeH2": {
+      "batch": 19,
+      "budget": 288,
+      "targets": [
+        0,
+        19,
+        38,
+        57,
+        76,
+        95,
+        114,
+        133,
+        152,
+        171,
+        190,
+        209,
+        228,
+        247,
+        266,
+        279,
+        287,
+        288
+      ]
+    },
+    "H2": {
+      "batch": 1,
+      "budget": 1,
+      "targets": [
+        0,
+        1
+      ]
+    },
+    "H2O": {
+      "batch": 34,
+      "budget": 678,
+      "targets": [
+        0,
+        34,
+        68,
+        102,
+        136,
+        170,
+        204,
+        238,
+        272,
+        306,
+        340,
+        374,
+        408,
+        442,
+        476,
+        510,
+        544,
+        578,
+        612,
+        646,
+        671,
+        675,
+        676,
+        678
+      ]
+    },
+    "LiH": {
+      "batch": 16,
+      "budget": 227,
+      "targets": [
+        0,
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        112,
+        128,
+        144,
+        160,
+        176,
+        192,
+        208,
+        214,
+        220,
+        223,
+        227
+      ]
+    },
+    "NH3": {
+      "batch": 136,
+      "budget": 4493,
+      "targets": [
+        0,
+        136,
+        272,
+        408,
+        544,
+        680,
+        816,
+        952,
+        1088,
+        1224,
+        1360,
+        1496,
+        1632,
+        1768,
+        1904,
+        2040,
+        2176,
+        2312,
+        2448,
+        2584,
+        2720,
+        2856,
+        2992,
+        3128,
+        3264,
+        3400,
+        3536,
+        3672,
+        3808,
+        3944,
+        4080,
+        4216,
+        4338,
+        4430,
+        4460,
+        4480,
+        4488,
+        4493
+      ]
+    }
+  },
+  "arms": {
+    "A": {
+      "growth_covariance": "full",
+      "growth_response": "current"
+    },
+    "B": {
+      "growth_covariance": "full",
+      "growth_response": "frozen_mu0"
+    },
+    "C": {
+      "growth_covariance": "diagonal",
+      "growth_response": "current"
+    },
+    "D": {
+      "growth_covariance": "diagonal",
+      "growth_response": "frozen_mu0"
+    }
+  },
+  "workers": 8,
+  "numerics": {
+    "solver": {
+      "ridge": 1e-08,
+      "relative_gap": 0.0001,
+      "allocation_floor": 1e-15,
+      "dual_safety_margin": 1e-08,
+      "linear_refinements": 3,
+      "coefficient_refinements": 2,
+      "conservation_tolerance": 1e-09,
+      "checkpoint_interval": 50,
+      "max_updates": 10000,
+      "max_evaluations": 100000,
+      "max_backtracks": 30,
+      "stall_checks": 3,
+      "threads": 1
+    },
+    "inner_gap": 0.001,
+    "terminal_gap": 0.0001,
+    "boundary_gaps": [
+      1e-05,
+      1e-06
+    ],
+    "pool_gain_over_initial": 0.0001,
+    "active_threshold": 1e-12,
+    "new_mass": 0.001,
+    "candidate_score_margin": 1e-06,
+    "dual_safety_margin": 1e-09,
+    "batch_fraction": 0.1,
+    "batch_minimum": 8,
+    "batch_maximum": 256,
+    "linear_refinements": 3,
+    "eigen_error_factor": 8,
+    "roundoff_factor": 64
+  },
+  "random_seeds": [
+    101,
+    211,
+    307,
+    401,
+    503
+  ]
+}

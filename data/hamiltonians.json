@@ -1,0 +1,66 @@
+{
+  "repository": "https://github.com/ThomsonYen/VQE_Hamiltonian",
+  "commit": "7e7a7cd672890ea24fa8c9a9387b0514426994cb",
+  "publication_doi": "10.1038/s41534-023-00683-y",
+  "fermion_to_qubit_transform": "bravyi_kitaev",
+  "coefficient_units": "Hartree",
+  "state_vector_order": "First Pauli character is the most significant qubit.",
+  "identity_convention": "state.npz stores nonidentity Pauli terms. Add identity_coefficient_Ha to the nonidentity energy estimate to obtain the total energy.",
+  "molecules": {
+    "H2": {
+      "source_file": "ham_lib/h2_fer.bin",
+      "source_url": "https://github.com/ThomsonYen/VQE_Hamiltonian/blob/7e7a7cd672890ea24fa8c9a9387b0514426994cb/ham_lib/h2_fer.bin",
+      "source_sha256": "e64396b7326397750a922138aa334e9ba8a5cfa9c06439e25bc57ee1080378a5",
+      "packaged_input": "data/inputs/H2/state.npz",
+      "packaged_input_sha256": "c7529345f95567d4f65b90bd1770843f3d3eebd2df77cfdf0fc6edbcfaeba81a",
+      "qubits": 4,
+      "nonidentity_terms": 14,
+      "electrons": 2,
+      "identity_coefficient_Ha": -0.32760818967480887
+    },
+    "LiH": {
+      "source_file": "ham_lib/lih_fer.bin",
+      "source_url": "https://github.com/ThomsonYen/VQE_Hamiltonian/blob/7e7a7cd672890ea24fa8c9a9387b0514426994cb/ham_lib/lih_fer.bin",
+      "source_sha256": "15362acd463f169bef2ca5ff2b4a129323b092bf7baff301e30b620c0e2ac6d0",
+      "packaged_input": "data/inputs/LiH/state.npz",
+      "packaged_input_sha256": "06ad3edbb2792f2d1f85b1dac46acee12f6fa1eeae87ff505d4a45aee9530c9f",
+      "qubits": 12,
+      "nonidentity_terms": 630,
+      "electrons": 4,
+      "identity_coefficient_Ha": -3.934441956757902
+    },
+    "BeH2": {
+      "source_file": "ham_lib/beh2_fer.bin",
+      "source_url": "https://github.com/ThomsonYen/VQE_Hamiltonian/blob/7e7a7cd672890ea24fa8c9a9387b0514426994cb/ham_lib/beh2_fer.bin",
+      "source_sha256": "cfea4f62a20fa7c4ccc53242ed142f3f2f15338354b27a8559077fa16b00a67c",
+      "packaged_input": "data/inputs/BeH2/state.npz",
+      "packaged_input_sha256": "e9da8aa87b9772d423433fd3ec41fbde341c96d9b6ef4578d40577599fd14fe4",
+      "qubits": 14,
+      "nonidentity_terms": 665,
+      "electrons": 6,
+      "identity_coefficient_Ha": -7.781616925569824
+    },
+    "H2O": {
+      "source_file": "ham_lib/h2o_fer.bin",
+      "source_url": "https://github.com/ThomsonYen/VQE_Hamiltonian/blob/7e7a7cd672890ea24fa8c9a9387b0514426994cb/ham_lib/h2o_fer.bin",
+      "source_sha256": "3a95d6b480298e37af948e188e563c07230eaf4b3b77d714b2fecb0c2104e076",
+      "packaged_input": "data/inputs/H2O/state.npz",
+      "packaged_input_sha256": "6f197ce209ef57c9bab99532dfd52bd83ef06a5de75316371efa3a8b8bd28c83",
+      "qubits": 14,
+      "nonidentity_terms": 1085,
+      "electrons": 10,
+      "identity_coefficient_Ha": -46.577441376239044
+    },
+    "NH3": {
+      "source_file": "ham_lib/nh3_fer.bin",
+      "source_url": "https://github.com/ThomsonYen/VQE_Hamiltonian/blob/7e7a7cd672890ea24fa8c9a9387b0514426994cb/ham_lib/nh3_fer.bin",
+      "source_sha256": "1deb5dc4f06450db3106cff8b3384963da1ec7bdf05cc0c65080d9d088b57955",
+      "packaged_input": "data/inputs/NH3/state.npz",
+      "packaged_input_sha256": "ee5f29239f75d4533e0bf5bf55a7b7a11cacc2e0e961e23187e0137c7e2475fe",
+      "qubits": 16,
+      "nonidentity_terms": 3608,
+      "electrons": 10,
+      "identity_coefficient_Ha": -33.971220769324034
+    }
+  }
+}
